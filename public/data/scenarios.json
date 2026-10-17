@@ -1,0 +1,21 @@
+{
+  "studyArea": "North Star Academy, Redwood City",
+  "school": {
+    "name": "North Star Academy",
+    "address": "400 Duane Street, Redwood City",
+    "longitude": -122.235,
+    "latitude": 37.48081
+  },
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Candidate improvement — TBD",
+      "status": "not_analyzed",
+      "source": "pending",
+      "estimatedCostUSD": null,
+      "reachableBefore": null,
+      "reachableAfter": null,
+      "geometry": null
+    }
+  ]
+}

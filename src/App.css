@@ -1,0 +1,80 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 16px 24px;
+  background: #173c35;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 320px;
+  padding: 24px;
+  background: #f6f8f7;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.note {
+  margin-top: 32px;
+  font-size: 13px;
+  color: #5d6b65;
+}
+
+.map-panel {
+  flex: 1;
+  min-width: 0;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .map-panel {
+    min-height: 55vh;
+  }
+}
