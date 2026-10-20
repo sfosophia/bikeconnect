@@ -32,17 +32,26 @@ export default function App() {
         data: "/data/bike_network.geojson",
       });
 
-      map.addLayer({
-        id: "bike-network-lines",
-        type: "line",
-        source: "bike-network",
-        paint: {
-          "line-color": "#2563eb",
-          "line-width": 3,
-          "line-opacity": 0.8,
-        },
-      });
-    });
+
+        map.addLayer({
+          id: "bike-network-lines",
+          type: "line",
+          source: "bike-network",
+          paint: {
+            "line-color": [
+              "match",
+              ["get", "facility_type"],
+              "dedicated", "#16a34a",
+              "bike_lane_or_shared", "#2563eb",
+              "residential_unverified", "#eab308",
+              "other", "#94a3b8",
+              "#94a3b8"
+            ],
+            "line-width": 3,
+            "line-opacity": 0.85,
+          },
+        });
+       });
 
 
     map.addControl(new NavigationControl(), "top-right");
