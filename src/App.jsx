@@ -26,6 +26,25 @@ export default function App() {
       zoom: 15,
     });
 
+    map.on("load", () => {
+      map.addSource("bike-network", {
+        type: "geojson",
+        data: "/data/bike_network.geojson",
+      });
+
+      map.addLayer({
+        id: "bike-network-lines",
+        type: "line",
+        source: "bike-network",
+        paint: {
+          "line-color": "#2563eb",
+          "line-width": 3,
+          "line-opacity": 0.8,
+        },
+      });
+    });
+
+
     map.addControl(new NavigationControl(), "top-right");
 
     const marker = new Marker({ color: "#2563eb" })
