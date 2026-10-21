@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2367834,
+            37.4815399
+          ],
+          [
+            -122.2363336,
+            37.4818987
+          ]
+        ]
+      },
+      "properties": {
+        "street": "James Avenue",
+        "from_node": "65397693",
+        "to_node": "8974503441",
+        "length_meters": 56.3,
+        "proposed_upgrade": "protected bike lane"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2363336,
+            37.4818987
+          ],
+          [
+            -122.2362067,
+            37.4820006
+          ],
+          [
+            -122.2360282,
+            37.4821318
+          ]
+        ]
+      },
+      "properties": {
+        "street": "James Avenue",
+        "from_node": "8974503441",
+        "to_node": "65465515",
+        "length_meters": 37.4,
+        "proposed_upgrade": "protected bike lane"
+      }
+    }
+  ]
+}

@@ -92,6 +92,11 @@ def main():
     print(f"Nodes: {len(graph.nodes)}")
     print(f"Edges: {len(graph.edges)}")
 
+    # Preserve the original graph for NetworkX simulations.
+    GRAPH_OUTPUT = OUTPUT.parent / "bike_network.graphml"
+    ox.save_graphml(graph, filepath=GRAPH_OUTPUT)
+    print(f"Saved graph to {GRAPH_OUTPUT}")
+
     _, edges = ox.graph_to_gdfs(graph)
     edges = edges.to_crs(epsg=4326).copy()
 

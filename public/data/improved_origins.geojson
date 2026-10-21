@@ -1,0 +1,4325 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2363336,
+          37.4818987
+        ]
+      },
+      "properties": {
+        "node_id": "8974503441",
+        "cost_before": 669.5,
+        "cost_after": 594.7,
+        "cost_reduction": 74.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2367834,
+          37.4815399
+        ]
+      },
+      "properties": {
+        "node_id": "65397693",
+        "cost_before": 838.3,
+        "cost_after": 651.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2373312,
+          37.4819756
+        ]
+      },
+      "properties": {
+        "node_id": "4773026180",
+        "cost_before": 1043.6,
+        "cost_after": 856.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2371909,
+          37.4820931
+        ]
+      },
+      "properties": {
+        "node_id": "4773026184",
+        "cost_before": 1097.6,
+        "cost_after": 910.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2375687,
+          37.4809169
+        ]
+      },
+      "properties": {
+        "node_id": "65507070",
+        "cost_before": 1132.3,
+        "cost_after": 944.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2373036,
+          37.4821823
+        ]
+      },
+      "properties": {
+        "node_id": "4773026186",
+        "cost_before": 1139.8,
+        "cost_after": 952.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2368837,
+          37.4823375
+        ]
+      },
+      "properties": {
+        "node_id": "4773026181",
+        "cost_before": 1212.8,
+        "cost_after": 1025.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.236996,
+          37.4824264
+        ]
+      },
+      "properties": {
+        "node_id": "4773026185",
+        "cost_before": 1254.8,
+        "cost_after": 1067.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2364909,
+          37.4826487
+        ]
+      },
+      "properties": {
+        "node_id": "4827766328",
+        "cost_before": 1270.4,
+        "cost_after": 1172.4,
+        "cost_reduction": 98.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2365139,
+          37.4826689
+        ]
+      },
+      "properties": {
+        "node_id": "10269197742",
+        "cost_before": 1279.5,
+        "cost_after": 1181.4,
+        "cost_reduction": 98.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2380264,
+          37.482528
+        ]
+      },
+      "properties": {
+        "node_id": "65397690",
+        "cost_before": 1304.1,
+        "cost_after": 1116.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2371496,
+          37.4825465
+        ]
+      },
+      "properties": {
+        "node_id": "4773026182",
+        "cost_before": 1311.1,
+        "cost_after": 1123.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2366489,
+          37.4827875
+        ]
+      },
+      "properties": {
+        "node_id": "10269197737",
+        "cost_before": 1330.5,
+        "cost_after": 1234.8,
+        "cost_reduction": 95.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.236747,
+          37.4828737
+        ]
+      },
+      "properties": {
+        "node_id": "4827766336",
+        "cost_before": 1369.3,
+        "cost_after": 1273.5,
+        "cost_reduction": 95.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2367152,
+          37.4829009
+        ]
+      },
+      "properties": {
+        "node_id": "4827766321",
+        "cost_before": 1381.7,
+        "cost_after": 1285.9,
+        "cost_reduction": 95.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2383496,
+          37.4802973
+        ]
+      },
+      "properties": {
+        "node_id": "65389289",
+        "cost_before": 1424.6,
+        "cost_after": 1237.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2365528,
+          37.4831998
+        ]
+      },
+      "properties": {
+        "node_id": "7354371438",
+        "cost_before": 1510.0,
+        "cost_after": 1414.2,
+        "cost_reduction": 95.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2388099,
+          37.4819099
+        ]
+      },
+      "properties": {
+        "node_id": "65440398",
+        "cost_before": 1596.5,
+        "cost_after": 1409.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2390162,
+          37.4833163
+        ]
+      },
+      "properties": {
+        "node_id": "4827766356",
+        "cost_before": 1675.3,
+        "cost_after": 1487.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.239132,
+          37.4796766
+        ]
+      },
+      "properties": {
+        "node_id": "65507071",
+        "cost_before": 1717.5,
+        "cost_after": 1530.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2391628,
+          37.4834331
+        ]
+      },
+      "properties": {
+        "node_id": "4827766364",
+        "cost_before": 1730.3,
+        "cost_after": 1542.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2389957,
+          37.483564
+        ]
+      },
+      "properties": {
+        "node_id": "4827766359",
+        "cost_before": 1792.4,
+        "cost_after": 1605.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2390919,
+          37.4836386
+        ]
+      },
+      "properties": {
+        "node_id": "4827766365",
+        "cost_before": 1828.0,
+        "cost_after": 1640.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2395929,
+          37.4812906
+        ]
+      },
+      "properties": {
+        "node_id": "65389287",
+        "cost_before": 1889.2,
+        "cost_after": 1701.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2399029,
+          37.4790552
+        ]
+      },
+      "properties": {
+        "node_id": "65456760",
+        "cost_before": 2008.3,
+        "cost_after": 1821.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2399767,
+          37.4840842
+        ]
+      },
+      "properties": {
+        "node_id": "65397688",
+        "cost_before": 2036.2,
+        "cost_after": 1848.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2382042,
+          37.4840778
+        ]
+      },
+      "properties": {
+        "node_id": "4827766358",
+        "cost_before": 2067.3,
+        "cost_after": 1879.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2378985,
+          37.4789253
+        ]
+      },
+      "properties": {
+        "node_id": "14041080148",
+        "cost_before": 2099.4,
+        "cost_after": 1991.3,
+        "cost_reduction": 108.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2380492,
+          37.4788128
+        ]
+      },
+      "properties": {
+        "node_id": "14041080145",
+        "cost_before": 2123.9,
+        "cost_after": 1936.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2396935,
+          37.4843073
+        ]
+      },
+      "properties": {
+        "node_id": "9899003288",
+        "cost_before": 2141.8,
+        "cost_after": 1954.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2403705,
+          37.4806688
+        ]
+      },
+      "properties": {
+        "node_id": "65440401",
+        "cost_before": 2181.4,
+        "cost_after": 1994.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2395133,
+          37.4841723
+        ]
+      },
+      "properties": {
+        "node_id": "9899003289",
+        "cost_before": 2207.4,
+        "cost_after": 2020.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2406932,
+          37.4784426
+        ]
+      },
+      "properties": {
+        "node_id": "65481380",
+        "cost_before": 2300.8,
+        "cost_after": 2113.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2407575,
+          37.4834634
+        ]
+      },
+      "properties": {
+        "node_id": "65432237",
+        "cost_before": 2327.5,
+        "cost_after": 2140.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2391882,
+          37.484707
+        ]
+      },
+      "properties": {
+        "node_id": "65432235",
+        "cost_before": 2330.7,
+        "cost_after": 2143.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2392849,
+          37.4838146
+        ]
+      },
+      "properties": {
+        "node_id": "4827766366",
+        "cost_before": 2373.5,
+        "cost_after": 2186.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2411441,
+          37.4800489
+        ]
+      },
+      "properties": {
+        "node_id": "65440403",
+        "cost_before": 2472.4,
+        "cost_after": 2285.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2387759,
+          37.4850419
+        ]
+      },
+      "properties": {
+        "node_id": "4827766370",
+        "cost_before": 2486.9,
+        "cost_after": 2299.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2398532,
+          37.4852568
+        ]
+      },
+      "properties": {
+        "node_id": "4774206370",
+        "cost_before": 2584.9,
+        "cost_after": 2397.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2414771,
+          37.4778154
+        ]
+      },
+      "properties": {
+        "node_id": "65495633",
+        "cost_before": 2595.5,
+        "cost_after": 2408.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2415367,
+          37.4828437
+        ]
+      },
+      "properties": {
+        "node_id": "65389286",
+        "cost_before": 2619.4,
+        "cost_after": 2432.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2384049,
+          37.4853257
+        ]
+      },
+      "properties": {
+        "node_id": "65432233",
+        "cost_before": 2623.3,
+        "cost_after": 2435.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.239555,
+          37.485504
+        ]
+      },
+      "properties": {
+        "node_id": "4774206371",
+        "cost_before": 2699.1,
+        "cost_after": 2511.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2419291,
+          37.479424
+        ]
+      },
+      "properties": {
+        "node_id": "65440404",
+        "cost_before": 2763.6,
+        "cost_after": 2576.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2419585,
+          37.4857056
+        ]
+      },
+      "properties": {
+        "node_id": "65397686",
+        "cost_before": 2790.5,
+        "cost_after": 2603.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2404281,
+          37.4857176
+        ]
+      },
+      "properties": {
+        "node_id": "7539991033",
+        "cost_before": 2801.2,
+        "cost_after": 2613.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2420732,
+          37.4856743
+        ]
+      },
+      "properties": {
+        "node_id": "8840705274",
+        "cost_before": 2824.3,
+        "cost_after": 2636.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2389889,
+          37.4857907
+        ]
+      },
+      "properties": {
+        "node_id": "5694993707",
+        "cost_before": 2842.3,
+        "cost_after": 2654.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2420515,
+          37.4857517
+        ]
+      },
+      "properties": {
+        "node_id": "8840705275",
+        "cost_before": 2850.7,
+        "cost_after": 2663.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2418475,
+          37.4858992
+        ]
+      },
+      "properties": {
+        "node_id": "4178981996",
+        "cost_before": 2864.8,
+        "cost_after": 2677.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2406179,
+          37.4858696
+        ]
+      },
+      "properties": {
+        "node_id": "7539991024",
+        "cost_before": 2872.6,
+        "cost_after": 2685.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2422582,
+          37.4772042
+        ]
+      },
+      "properties": {
+        "node_id": "65436461",
+        "cost_before": 2885.9,
+        "cost_after": 2698.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2406996,
+          37.4859351
+        ]
+      },
+      "properties": {
+        "node_id": "65447148",
+        "cost_before": 2903.3,
+        "cost_after": 2716.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2423155,
+          37.482224
+        ]
+      },
+      "properties": {
+        "node_id": "65432238",
+        "cost_before": 2911.3,
+        "cost_after": 2724.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2392524,
+          37.4860012
+        ]
+      },
+      "properties": {
+        "node_id": "65447147",
+        "cost_before": 2941.3,
+        "cost_after": 2753.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2374344,
+          37.4860918
+        ]
+      },
+      "properties": {
+        "node_id": "4774567904",
+        "cost_before": 2985.7,
+        "cost_after": 2798.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2393738,
+          37.4856836
+        ]
+      },
+      "properties": {
+        "node_id": "5694993709",
+        "cost_before": 2988.8,
+        "cost_after": 2801.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.242599,
+          37.4769341
+        ]
+      },
+      "properties": {
+        "node_id": "65507073",
+        "cost_before": 3013.4,
+        "cost_after": 2826.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.241403,
+          37.4862055
+        ]
+      },
+      "properties": {
+        "node_id": "1110820050",
+        "cost_before": 3021.2,
+        "cost_after": 2833.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.238934,
+          37.4860157
+        ]
+      },
+      "properties": {
+        "node_id": "4774328987",
+        "cost_before": 3025.7,
+        "cost_after": 2838.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2372427,
+          37.4862426
+        ]
+      },
+      "properties": {
+        "node_id": "4913371063",
+        "cost_before": 3050.0,
+        "cost_after": 2869.8,
+        "cost_reduction": 180.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2427148,
+          37.4788025
+        ]
+      },
+      "properties": {
+        "node_id": "65440405",
+        "cost_before": 3057.3,
+        "cost_after": 2870.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2412756,
+          37.4858859
+        ]
+      },
+      "properties": {
+        "node_id": "4761105503",
+        "cost_before": 3059.0,
+        "cost_after": 2871.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2387883,
+          37.4860224
+        ]
+      },
+      "properties": {
+        "node_id": "4774328983",
+        "cost_before": 3064.3,
+        "cost_after": 2877.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2377999,
+          37.4860825
+        ]
+      },
+      "properties": {
+        "node_id": "65447146",
+        "cost_before": 3082.5,
+        "cost_after": 2895.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.241268,
+          37.4863651
+        ]
+      },
+      "properties": {
+        "node_id": "65436784",
+        "cost_before": 3086.0,
+        "cost_after": 2898.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2427956,
+          37.4850994
+        ]
+      },
+      "properties": {
+        "node_id": "65436787",
+        "cost_before": 3094.9,
+        "cost_after": 2907.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2411103,
+          37.48622
+        ]
+      },
+      "properties": {
+        "node_id": "1110820061",
+        "cost_before": 3100.3,
+        "cost_after": 2912.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2385512,
+          37.4860413
+        ]
+      },
+      "properties": {
+        "node_id": "4774328980",
+        "cost_before": 3127.4,
+        "cost_after": 2940.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.24114,
+          37.4864304
+        ]
+      },
+      "properties": {
+        "node_id": "4761105495",
+        "cost_before": 3128.4,
+        "cost_after": 2941.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2415831,
+          37.4858579
+        ]
+      },
+      "properties": {
+        "node_id": "281366147",
+        "cost_before": 3141.0,
+        "cost_after": 2953.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2375206,
+          37.4864611
+        ]
+      },
+      "properties": {
+        "node_id": "4913371065",
+        "cost_before": 3153.5,
+        "cost_after": 2973.3,
+        "cost_reduction": 180.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2410669,
+          37.4864793
+        ]
+      },
+      "properties": {
+        "node_id": "1110820053",
+        "cost_before": 3153.7,
+        "cost_after": 2966.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2409148,
+          37.4860846
+        ]
+      },
+      "properties": {
+        "node_id": "1110820048",
+        "cost_before": 3169.0,
+        "cost_after": 2981.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2375654,
+          37.4864964
+        ]
+      },
+      "properties": {
+        "node_id": "4913371064",
+        "cost_before": 3170.3,
+        "cost_after": 2990.0,
+        "cost_reduction": 180.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2430982,
+          37.4816064
+        ]
+      },
+      "properties": {
+        "node_id": "65432239",
+        "cost_before": 3203.5,
+        "cost_after": 3016.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2399581,
+          37.4865701
+        ]
+      },
+      "properties": {
+        "node_id": "4772483528",
+        "cost_before": 3207.6,
+        "cost_after": 3020.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2386922,
+          37.4862504
+        ]
+      },
+      "properties": {
+        "node_id": "4774328978",
+        "cost_before": 3211.9,
+        "cost_after": 3024.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.240771,
+          37.4866859
+        ]
+      },
+      "properties": {
+        "node_id": "1110820047",
+        "cost_before": 3262.1,
+        "cost_after": 3074.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2401463,
+          37.4867229
+        ]
+      },
+      "properties": {
+        "node_id": "4746035672",
+        "cost_before": 3278.8,
+        "cost_after": 3091.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2433674,
+          37.4762971
+        ]
+      },
+      "properties": {
+        "node_id": "4772582596",
+        "cost_before": 3307.6,
+        "cost_after": 3120.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2396598,
+          37.4867901
+        ]
+      },
+      "properties": {
+        "node_id": "4772483529",
+        "cost_before": 3315.4,
+        "cost_after": 3128.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2434948,
+          37.4781819
+        ]
+      },
+      "properties": {
+        "node_id": "65436459",
+        "cost_before": 3348.0,
+        "cost_after": 3160.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2435085,
+          37.4762039
+        ]
+      },
+      "properties": {
+        "node_id": "4772968465",
+        "cost_before": 3356.4,
+        "cost_after": 3169.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2403555,
+          37.4865473
+        ]
+      },
+      "properties": {
+        "node_id": "4746035671",
+        "cost_before": 3359.5,
+        "cost_after": 3172.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2435751,
+          37.4844762
+        ]
+      },
+      "properties": {
+        "node_id": "65389285",
+        "cost_before": 3386.0,
+        "cost_after": 3198.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2404313,
+          37.4869543
+        ]
+      },
+      "properties": {
+        "node_id": "65436782",
+        "cost_before": 3386.8,
+        "cost_after": 3199.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2438816,
+          37.4809836
+        ]
+      },
+      "properties": {
+        "node_id": "65432241",
+        "cost_before": 3497.0,
+        "cost_after": 3309.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2442276,
+          37.4776002
+        ]
+      },
+      "properties": {
+        "node_id": "65440408",
+        "cost_before": 3502.8,
+        "cost_after": 3315.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2438134,
+          37.4871748
+        ]
+      },
+      "properties": {
+        "node_id": "65397683",
+        "cost_before": 3516.2,
+        "cost_after": 3328.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2400135,
+          37.4872844
+        ]
+      },
+      "properties": {
+        "node_id": "1473678760",
+        "cost_before": 3542.8,
+        "cost_after": 3355.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2362346,
+          37.4846136
+        ]
+      },
+      "properties": {
+        "node_id": "4774567909",
+        "cost_before": 3600.2,
+        "cost_after": 3412.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.239663,
+          37.4875623
+        ]
+      },
+      "properties": {
+        "node_id": "65436781",
+        "cost_before": 3674.0,
+        "cost_after": 3486.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2447047,
+          37.4761986
+        ]
+      },
+      "properties": {
+        "node_id": "65506188",
+        "cost_before": 3675.1,
+        "cost_after": 3487.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2443521,
+          37.4838623
+        ]
+      },
+      "properties": {
+        "node_id": "65436789",
+        "cost_before": 3676.3,
+        "cost_after": 3488.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2364501,
+          37.4844342
+        ]
+      },
+      "properties": {
+        "node_id": "4827890249",
+        "cost_before": 3682.9,
+        "cost_after": 3495.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2447739,
+          37.4761814
+        ]
+      },
+      "properties": {
+        "node_id": "12993287656",
+        "cost_before": 3694.3,
+        "cost_after": 3506.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2358249,
+          37.4846594
+        ]
+      },
+      "properties": {
+        "node_id": "4774567916",
+        "cost_before": 3712.5,
+        "cost_after": 3525.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2448876,
+          37.4761531
+        ]
+      },
+      "properties": {
+        "node_id": "12993287658",
+        "cost_before": 3725.8,
+        "cost_after": 3538.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2446986,
+          37.4760673
+        ]
+      },
+      "properties": {
+        "node_id": "12993287655",
+        "cost_before": 3737.3,
+        "cost_after": 3549.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.239856,
+          37.4877157
+        ]
+      },
+      "properties": {
+        "node_id": "1473678826",
+        "cost_before": 3741.0,
+        "cost_after": 3553.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.243078,
+          37.4750975
+        ]
+      },
+      "properties": {
+        "node_id": "4913371023",
+        "cost_before": 3743.8,
+        "cost_after": 3556.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2430766,
+          37.4878058
+        ]
+      },
+      "properties": {
+        "node_id": "65424651",
+        "cost_before": 3764.3,
+        "cost_after": 3577.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2450346,
+          37.4760994
+        ]
+      },
+      "properties": {
+        "node_id": "12993287650",
+        "cost_before": 3768.7,
+        "cost_after": 3581.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2448017,
+          37.4760407
+        ]
+      },
+      "properties": {
+        "node_id": "12993287657",
+        "cost_before": 3769.7,
+        "cost_after": 3582.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2445934,
+          37.4865477
+        ]
+      },
+      "properties": {
+        "node_id": "65424652",
+        "cost_before": 3773.1,
+        "cost_after": 3585.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2450797,
+          37.4760785
+        ]
+      },
+      "properties": {
+        "node_id": "12993287660",
+        "cost_before": 3782.6,
+        "cost_after": 3595.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2450883,
+          37.4760739
+        ]
+      },
+      "properties": {
+        "node_id": "12993287648",
+        "cost_before": 3785.3,
+        "cost_after": 3598.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2446576,
+          37.4803622
+        ]
+      },
+      "properties": {
+        "node_id": "65432243",
+        "cost_before": 3788.8,
+        "cost_after": 3601.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2393253,
+          37.4878282
+        ]
+      },
+      "properties": {
+        "node_id": "1473678875",
+        "cost_before": 3799.9,
+        "cost_after": 3612.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2392433,
+          37.487893
+        ]
+      },
+      "properties": {
+        "node_id": "4774548336",
+        "cost_before": 3805.4,
+        "cost_after": 3643.2,
+        "cost_reduction": 162.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2393134,
+          37.4872782
+        ]
+      },
+      "properties": {
+        "node_id": "6114976546",
+        "cost_before": 3806.5,
+        "cost_after": 3619.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2433093,
+          37.4750121
+        ]
+      },
+      "properties": {
+        "node_id": "8078964854",
+        "cost_before": 3811.3,
+        "cost_after": 3624.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2451078,
+          37.4762302
+        ]
+      },
+      "properties": {
+        "node_id": "12993287649",
+        "cost_before": 3816.4,
+        "cost_after": 3629.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2450717,
+          37.476939
+        ]
+      },
+      "properties": {
+        "node_id": "65440411",
+        "cost_before": 3816.8,
+        "cost_after": 3629.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2449894,
+          37.4759728
+        ]
+      },
+      "properties": {
+        "node_id": "12993287659",
+        "cost_before": 3825.2,
+        "cost_after": 3637.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2401144,
+          37.4879024
+        ]
+      },
+      "properties": {
+        "node_id": "1473678918",
+        "cost_before": 3833.5,
+        "cost_after": 3646.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2452041,
+          37.4762072
+        ]
+      },
+      "properties": {
+        "node_id": "12993287647",
+        "cost_before": 3839.3,
+        "cost_after": 3652.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2452593,
+          37.4759825
+        ]
+      },
+      "properties": {
+        "node_id": "12993287663",
+        "cost_before": 3839.9,
+        "cost_after": 3652.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2391955,
+          37.4871829
+        ]
+      },
+      "properties": {
+        "node_id": "6114976544",
+        "cost_before": 3851.0,
+        "cost_after": 3663.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2394467,
+          37.4871724
+        ]
+      },
+      "properties": {
+        "node_id": "6114976547",
+        "cost_before": 3856.4,
+        "cost_after": 3669.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2430552,
+          37.4747107
+        ]
+      },
+      "properties": {
+        "node_id": "4913371024",
+        "cost_before": 3873.6,
+        "cost_after": 3686.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2453862,
+          37.4758935
+        ]
+      },
+      "properties": {
+        "node_id": "12993287636",
+        "cost_before": 3884.9,
+        "cost_after": 3697.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2450869,
+          37.4758577
+        ]
+      },
+      "properties": {
+        "node_id": "12993287661",
+        "cost_before": 3902.2,
+        "cost_after": 3714.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2393852,
+          37.4870214
+        ]
+      },
+      "properties": {
+        "node_id": "6114976545",
+        "cost_before": 3924.6,
+        "cost_after": 3737.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455089,
+          37.4757988
+        ]
+      },
+      "properties": {
+        "node_id": "12993287639",
+        "cost_before": 3930.2,
+        "cost_after": 3742.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455164,
+          37.475793
+        ]
+      },
+      "properties": {
+        "node_id": "7949744575",
+        "cost_before": 3932.9,
+        "cost_after": 3745.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2396879,
+          37.4881219
+        ]
+      },
+      "properties": {
+        "node_id": "1473679037",
+        "cost_before": 3937.1,
+        "cost_after": 3749.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2403953,
+          37.4881306
+        ]
+      },
+      "properties": {
+        "node_id": "4774346569",
+        "cost_before": 3939.9,
+        "cost_after": 3752.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2396244,
+          37.4881882
+        ]
+      },
+      "properties": {
+        "node_id": "4774548337",
+        "cost_before": 3946.3,
+        "cost_after": 3784.2,
+        "cost_reduction": 162.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2456126,
+          37.4760652
+        ]
+      },
+      "properties": {
+        "node_id": "12993287635",
+        "cost_before": 3967.8,
+        "cost_after": 3780.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2451384,
+          37.4832387
+        ]
+      },
+      "properties": {
+        "node_id": "65436792",
+        "cost_before": 3970.5,
+        "cost_after": 3783.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2456234,
+          37.4758839
+        ]
+      },
+      "properties": {
+        "node_id": "12993288246",
+        "cost_before": 3971.7,
+        "cost_after": 3784.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2456512,
+          37.4756592
+        ]
+      },
+      "properties": {
+        "node_id": "7883603775",
+        "cost_before": 3990.4,
+        "cost_after": 3803.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2456991,
+          37.4758266
+        ]
+      },
+      "properties": {
+        "node_id": "12993288247",
+        "cost_before": 3999.4,
+        "cost_after": 3812.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2427803,
+          37.4743296
+        ]
+      },
+      "properties": {
+        "node_id": "65403252",
+        "cost_before": 4004.9,
+        "cost_after": 3833.6,
+        "cost_reduction": 171.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457371,
+          37.47555
+        ]
+      },
+      "properties": {
+        "node_id": "12993287642",
+        "cost_before": 4033.4,
+        "cost_after": 3846.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2423387,
+          37.4883708
+        ]
+      },
+      "properties": {
+        "node_id": "4772364089",
+        "cost_before": 4035.8,
+        "cost_after": 3848.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457433,
+          37.4755395
+        ]
+      },
+      "properties": {
+        "node_id": "12993287671",
+        "cost_before": 4037.3,
+        "cost_after": 3850.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2458067,
+          37.4760176
+        ]
+      },
+      "properties": {
+        "node_id": "12993287638",
+        "cost_before": 4037.6,
+        "cost_after": 3850.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2406825,
+          37.4883639
+        ]
+      },
+      "properties": {
+        "node_id": "1473679194",
+        "cost_before": 4048.7,
+        "cost_after": 3861.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2451442,
+          37.475606
+        ]
+      },
+      "properties": {
+        "node_id": "7949744572",
+        "cost_before": 4052.6,
+        "cost_after": 3865.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.23866,
+          37.4867483
+        ]
+      },
+      "properties": {
+        "node_id": "4783299612",
+        "cost_before": 4053.8,
+        "cost_after": 3866.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2422783,
+          37.4884234
+        ]
+      },
+      "properties": {
+        "node_id": "65424649",
+        "cost_before": 4059.5,
+        "cost_after": 3872.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457792,
+          37.4754789
+        ]
+      },
+      "properties": {
+        "node_id": "12993287644",
+        "cost_before": 4059.6,
+        "cost_after": 3872.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2453753,
+          37.4859311
+        ]
+      },
+      "properties": {
+        "node_id": "65389281",
+        "cost_before": 4064.9,
+        "cost_after": 3877.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2454405,
+          37.4797416
+        ]
+      },
+      "properties": {
+        "node_id": "65432245",
+        "cost_before": 4080.1,
+        "cost_after": 3892.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455892,
+          37.4754815
+        ]
+      },
+      "properties": {
+        "node_id": "12993287670",
+        "cost_before": 4082.5,
+        "cost_after": 3895.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2452668,
+          37.4755309
+        ]
+      },
+      "properties": {
+        "node_id": "7949744571",
+        "cost_before": 4106.5,
+        "cost_after": 3919.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459289,
+          37.4755954
+        ]
+      },
+      "properties": {
+        "node_id": "12993287643",
+        "cost_before": 4115.1,
+        "cost_after": 3927.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2408618,
+          37.4885096
+        ]
+      },
+      "properties": {
+        "node_id": "1473679313",
+        "cost_before": 4116.6,
+        "cost_after": 3929.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2458512,
+          37.4753127
+        ]
+      },
+      "properties": {
+        "node_id": "12993287674",
+        "cost_before": 4118.4,
+        "cost_after": 3931.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459824,
+          37.4757273
+        ]
+      },
+      "properties": {
+        "node_id": "12993287641",
+        "cost_before": 4121.3,
+        "cost_after": 3933.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.245857,
+          37.4752976
+        ]
+      },
+      "properties": {
+        "node_id": "12993287646",
+        "cost_before": 4123.6,
+        "cost_after": 3936.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2404797,
+          37.4885364
+        ]
+      },
+      "properties": {
+        "node_id": "1473679333",
+        "cost_before": 4127.4,
+        "cost_after": 3940.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2420964,
+          37.4885681
+        ]
+      },
+      "properties": {
+        "node_id": "4772618380",
+        "cost_before": 4127.7,
+        "cost_after": 3940.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2384493,
+          37.4865768
+        ]
+      },
+      "properties": {
+        "node_id": "4772530636",
+        "cost_before": 4133.7,
+        "cost_after": 3946.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2409504,
+          37.4881524
+        ]
+      },
+      "properties": {
+        "node_id": "1473679050",
+        "cost_before": 4148.7,
+        "cost_after": 3961.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2441485,
+          37.4886336
+        ]
+      },
+      "properties": {
+        "node_id": "65455048",
+        "cost_before": 4160.4,
+        "cost_after": 3973.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.238952,
+          37.4865157
+        ]
+      },
+      "properties": {
+        "node_id": "4783299611",
+        "cost_before": 4163.3,
+        "cost_after": 3975.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2410196,
+          37.4886377
+        ]
+      },
+      "properties": {
+        "node_id": "1473679414",
+        "cost_before": 4176.3,
+        "cost_after": 3989.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2419536,
+          37.4886848
+        ]
+      },
+      "properties": {
+        "node_id": "4774312821",
+        "cost_before": 4181.9,
+        "cost_after": 3994.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457346,
+          37.47518
+        ]
+      },
+      "properties": {
+        "node_id": "12993287672",
+        "cost_before": 4192.4,
+        "cost_after": 4005.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2460803,
+          37.4777569
+        ]
+      },
+      "properties": {
+        "node_id": "65506186",
+        "cost_before": 4198.5,
+        "cost_after": 4011.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2406346,
+          37.4886945
+        ]
+      },
+      "properties": {
+        "node_id": "1473679442",
+        "cost_before": 4202.7,
+        "cost_after": 4015.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2440532,
+          37.4887502
+        ]
+      },
+      "properties": {
+        "node_id": "65455046",
+        "cost_before": 4206.7,
+        "cost_after": 4019.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459319,
+          37.4750276
+        ]
+      },
+      "properties": {
+        "node_id": "12993287675",
+        "cost_before": 4216.1,
+        "cost_after": 4028.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2461121,
+          37.4754944
+        ]
+      },
+      "properties": {
+        "node_id": "12993287645",
+        "cost_before": 4217.8,
+        "cost_after": 4030.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.245944,
+          37.4749692
+        ]
+      },
+      "properties": {
+        "node_id": "65472710",
+        "cost_before": 4235.8,
+        "cost_after": 4048.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2462208,
+          37.479122
+        ]
+      },
+      "properties": {
+        "node_id": "65432246",
+        "cost_before": 4239.2,
+        "cost_after": 4051.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2429067,
+          37.4887949
+        ]
+      },
+      "properties": {
+        "node_id": "4772364090",
+        "cost_before": 4242.2,
+        "cost_after": 4054.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2411993,
+          37.488794
+        ]
+      },
+      "properties": {
+        "node_id": "4774316139",
+        "cost_before": 4246.9,
+        "cost_after": 4059.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459201,
+          37.4826149
+        ]
+      },
+      "properties": {
+        "node_id": "65436794",
+        "cost_before": 4263.4,
+        "cost_after": 4076.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2388022,
+          37.4862992
+        ]
+      },
+      "properties": {
+        "node_id": "4772530637",
+        "cost_before": 4265.2,
+        "cost_after": 4077.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459569,
+          37.4748799
+        ]
+      },
+      "properties": {
+        "node_id": "12993288248",
+        "cost_before": 4265.8,
+        "cost_after": 4078.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2413119,
+          37.4884004
+        ]
+      },
+      "properties": {
+        "node_id": "1473679230",
+        "cost_before": 4287.0,
+        "cost_after": 4099.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2413587,
+          37.4884363
+        ]
+      },
+      "properties": {
+        "node_id": "1473679253",
+        "cost_before": 4304.3,
+        "cost_after": 4116.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.245975,
+          37.4747553
+        ]
+      },
+      "properties": {
+        "node_id": "65413811",
+        "cost_before": 4307.6,
+        "cost_after": 4120.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2412529,
+          37.4883552
+        ]
+      },
+      "properties": {
+        "node_id": "1473679179",
+        "cost_before": 4308.7,
+        "cost_after": 4121.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459776,
+          37.4747344
+        ]
+      },
+      "properties": {
+        "node_id": "12993288256",
+        "cost_before": 4314.6,
+        "cost_after": 4127.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2410009,
+          37.4889391
+        ]
+      },
+      "properties": {
+        "node_id": "4774316140",
+        "cost_before": 4318.3,
+        "cost_after": 4131.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455428,
+          37.4749692
+        ]
+      },
+      "properties": {
+        "node_id": "12993287676",
+        "cost_before": 4320.9,
+        "cost_after": 4133.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459826,
+          37.4746927
+        ]
+      },
+      "properties": {
+        "node_id": "12993288258",
+        "cost_before": 4328.6,
+        "cost_after": 4141.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2426408,
+          37.4890038
+        ]
+      },
+      "properties": {
+        "node_id": "4772618381",
+        "cost_before": 4332.4,
+        "cost_after": 4145.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2418636,
+          37.4749665
+        ]
+      },
+      "properties": {
+        "node_id": "65419760",
+        "cost_before": 4335.7,
+        "cost_after": 4164.3,
+        "cost_reduction": 171.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2414998,
+          37.4890556
+        ]
+      },
+      "properties": {
+        "node_id": "65424646",
+        "cost_before": 4354.4,
+        "cost_after": 4167.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2414923,
+          37.4890616
+        ]
+      },
+      "properties": {
+        "node_id": "4772361980",
+        "cost_before": 4357.2,
+        "cost_after": 4169.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2461702,
+          37.4853152
+        ]
+      },
+      "properties": {
+        "node_id": "65424655",
+        "cost_before": 4359.0,
+        "cost_after": 4171.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2424706,
+          37.4890835
+        ]
+      },
+      "properties": {
+        "node_id": "4774312822",
+        "cost_before": 4372.8,
+        "cost_after": 4185.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457884,
+          37.4746762
+        ]
+      },
+      "properties": {
+        "node_id": "12993288257",
+        "cost_before": 4380.3,
+        "cost_after": 4193.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2460016,
+          37.4745371
+        ]
+      },
+      "properties": {
+        "node_id": "12993288260",
+        "cost_before": 4380.8,
+        "cost_after": 4193.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455455,
+          37.4748802
+        ]
+      },
+      "properties": {
+        "node_id": "12993288250",
+        "cost_before": 4390.5,
+        "cost_after": 4203.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.24467,
+          37.4880153
+        ]
+      },
+      "properties": {
+        "node_id": "65455052",
+        "cost_before": 4409.8,
+        "cost_after": 4222.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2460172,
+          37.4744096
+        ]
+      },
+      "properties": {
+        "node_id": "12993288262",
+        "cost_before": 4423.5,
+        "cost_after": 4236.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2458269,
+          37.4745232
+        ]
+      },
+      "properties": {
+        "node_id": "12993288259",
+        "cost_before": 4427.2,
+        "cost_after": 4239.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2454952,
+          37.4746907
+        ]
+      },
+      "properties": {
+        "node_id": "12993288255",
+        "cost_before": 4443.2,
+        "cost_after": 4255.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2470718,
+          37.4779626
+        ]
+      },
+      "properties": {
+        "node_id": "65497582",
+        "cost_before": 4471.6,
+        "cost_after": 4284.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2466401,
+          37.4849822
+        ]
+      },
+      "properties": {
+        "node_id": "65424656",
+        "cost_before": 4525.8,
+        "cost_after": 4338.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2419556,
+          37.4894247
+        ]
+      },
+      "properties": {
+        "node_id": "4772361981",
+        "cost_before": 4529.5,
+        "cost_after": 4342.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2470215,
+          37.4785097
+        ]
+      },
+      "properties": {
+        "node_id": "65432248",
+        "cost_before": 4533.6,
+        "cost_after": 4346.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455656,
+          37.4743669
+        ]
+      },
+      "properties": {
+        "node_id": "12993288261",
+        "cost_before": 4543.9,
+        "cost_after": 4356.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2467051,
+          37.4820008
+        ]
+      },
+      "properties": {
+        "node_id": "65436796",
+        "cost_before": 4555.2,
+        "cost_after": 4367.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.243389,
+          37.4897463
+        ]
+      },
+      "properties": {
+        "node_id": "783764692",
+        "cost_before": 4597.9,
+        "cost_after": 4410.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2445573,
+          37.4733582
+        ]
+      },
+      "properties": {
+        "node_id": "65493508",
+        "cost_before": 4642.3,
+        "cost_after": 4466.5,
+        "cost_reduction": 175.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2460991,
+          37.4737379
+        ]
+      },
+      "properties": {
+        "node_id": "7137478801",
+        "cost_before": 4648.6,
+        "cost_after": 4461.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2469558,
+          37.4847058
+        ]
+      },
+      "properties": {
+        "node_id": "65424659",
+        "cost_before": 4650.2,
+        "cost_after": 4462.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2473394,
+          37.4748426
+        ]
+      },
+      "properties": {
+        "node_id": "65413809",
+        "cost_before": 4670.1,
+        "cost_after": 4482.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2478201,
+          37.477893
+        ]
+      },
+      "properties": {
+        "node_id": "2497632813",
+        "cost_before": 4671.5,
+        "cost_after": 4484.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455798,
+          37.4874772
+        ]
+      },
+      "properties": {
+        "node_id": "65455054",
+        "cost_before": 4710.3,
+        "cost_after": 4522.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2461082,
+          37.4734858
+        ]
+      },
+      "properties": {
+        "node_id": "7137478803",
+        "cost_before": 4732.8,
+        "cost_after": 4545.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2438395,
+          37.4900133
+        ]
+      },
+      "properties": {
+        "node_id": "272085902",
+        "cost_before": 4749.8,
+        "cost_after": 4562.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2455529,
+          37.4898671
+        ]
+      },
+      "properties": {
+        "node_id": "65455939",
+        "cost_before": 4751.2,
+        "cost_after": 4563.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2438882,
+          37.4900746
+        ]
+      },
+      "properties": {
+        "node_id": "272085901",
+        "cost_before": 4773.9,
+        "cost_after": 4586.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2472879,
+          37.4770427
+        ]
+      },
+      "properties": {
+        "node_id": "65472706",
+        "cost_before": 4787.8,
+        "cost_after": 4600.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2463547,
+          37.4736278
+        ]
+      },
+      "properties": {
+        "node_id": "281366859",
+        "cost_before": 4813.4,
+        "cost_after": 4626.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2482431,
+          37.4776209
+        ]
+      },
+      "properties": {
+        "node_id": "65416042",
+        "cost_before": 4815.6,
+        "cost_after": 4628.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457037,
+          37.4734392
+        ]
+      },
+      "properties": {
+        "node_id": "7137478808",
+        "cost_before": 4841.2,
+        "cost_after": 4653.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2475866,
+          37.4855741
+        ]
+      },
+      "properties": {
+        "node_id": "65437151",
+        "cost_before": 4844.8,
+        "cost_after": 4657.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2458223,
+          37.4732348
+        ]
+      },
+      "properties": {
+        "node_id": "7137478807",
+        "cost_before": 4845.8,
+        "cost_after": 4658.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2474808,
+          37.4813738
+        ]
+      },
+      "properties": {
+        "node_id": "65436457",
+        "cost_before": 4847.1,
+        "cost_after": 4659.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2457098,
+          37.4731306
+        ]
+      },
+      "properties": {
+        "node_id": "65478722",
+        "cost_before": 4891.6,
+        "cost_after": 4704.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2467994,
+          37.4769891
+        ]
+      },
+      "properties": {
+        "node_id": "12993288223",
+        "cost_before": 4921.4,
+        "cost_after": 4734.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2479612,
+          37.4742439
+        ]
+      },
+      "properties": {
+        "node_id": "5465244702",
+        "cost_before": 4933.9,
+        "cost_after": 4746.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2477644,
+          37.4841008
+        ]
+      },
+      "properties": {
+        "node_id": "65424660",
+        "cost_before": 4944.5,
+        "cost_after": 4757.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2443724,
+          37.4903956
+        ]
+      },
+      "properties": {
+        "node_id": "2280211802",
+        "cost_before": 4951.5,
+        "cost_after": 4764.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.247746,
+          37.4765173
+        ]
+      },
+      "properties": {
+        "node_id": "449095024",
+        "cost_before": 4958.0,
+        "cost_after": 4770.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2462198,
+          37.4891507
+        ]
+      },
+      "properties": {
+        "node_id": "65477753",
+        "cost_before": 4968.1,
+        "cost_after": 4780.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2469025,
+          37.4768636
+        ]
+      },
+      "properties": {
+        "node_id": "12993288222",
+        "cost_before": 4971.4,
+        "cost_after": 4784.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.243578,
+          37.4906433
+        ]
+      },
+      "properties": {
+        "node_id": "5993684182",
+        "cost_before": 4996.5,
+        "cost_after": 4809.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2435546,
+          37.4906574
+        ]
+      },
+      "properties": {
+        "node_id": "65473032",
+        "cost_before": 5004.3,
+        "cost_after": 4816.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.248263,
+          37.4807532
+        ]
+      },
+      "properties": {
+        "node_id": "65436798",
+        "cost_before": 5006.3,
+        "cost_after": 4818.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2462631,
+          37.4903866
+        ]
+      },
+      "properties": {
+        "node_id": "65455941",
+        "cost_before": 5006.8,
+        "cost_after": 4819.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2465311,
+          37.4870176
+        ]
+      },
+      "properties": {
+        "node_id": "65389421",
+        "cost_before": 5007.4,
+        "cost_after": 4820.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2465175,
+          37.476802
+        ]
+      },
+      "properties": {
+        "node_id": "12993288228",
+        "cost_before": 5019.2,
+        "cost_after": 4831.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2464642,
+          37.4767613
+        ]
+      },
+      "properties": {
+        "node_id": "12993288231",
+        "cost_before": 5038.8,
+        "cost_after": 4851.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2463912,
+          37.490459
+        ]
+      },
+      "properties": {
+        "node_id": "783764739",
+        "cost_before": 5048.5,
+        "cost_after": 4861.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2483724,
+          37.4853246
+        ]
+      },
+      "properties": {
+        "node_id": "2280207863",
+        "cost_before": 5069.4,
+        "cost_after": 4882.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2465754,
+          37.4766741
+        ]
+      },
+      "properties": {
+        "node_id": "12993288230",
+        "cost_before": 5080.2,
+        "cost_after": 4892.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2431943,
+          37.4907162
+        ]
+      },
+      "properties": {
+        "node_id": "272085895",
+        "cost_before": 5103.9,
+        "cost_after": 4916.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2484345,
+          37.473873
+        ]
+      },
+      "properties": {
+        "node_id": "65501224",
+        "cost_before": 5110.0,
+        "cost_after": 4922.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2461968,
+          37.4765572
+        ]
+      },
+      "properties": {
+        "node_id": "12993288234",
+        "cost_before": 5137.0,
+        "cost_after": 4949.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2464198,
+          37.472568
+        ]
+      },
+      "properties": {
+        "node_id": "65462721",
+        "cost_before": 5157.2,
+        "cost_after": 4969.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2469262,
+          37.4766352
+        ]
+      },
+      "properties": {
+        "node_id": "12993288225",
+        "cost_before": 5168.8,
+        "cost_after": 4981.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2477258,
+          37.4737303
+        ]
+      },
+      "properties": {
+        "node_id": "65462720",
+        "cost_before": 5178.0,
+        "cost_after": 4990.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2460669,
+          37.4764582
+        ]
+      },
+      "properties": {
+        "node_id": "12993288237",
+        "cost_before": 5184.7,
+        "cost_after": 4997.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2463368,
+          37.4764409
+        ]
+      },
+      "properties": {
+        "node_id": "12993288233",
+        "cost_before": 5190.7,
+        "cost_after": 5003.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2429259,
+          37.4904794
+        ]
+      },
+      "properties": {
+        "node_id": "2280188845",
+        "cost_before": 5218.3,
+        "cost_after": 5031.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459524,
+          37.4763708
+        ]
+      },
+      "properties": {
+        "node_id": "12993288240",
+        "cost_before": 5226.8,
+        "cost_after": 5039.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2470546,
+          37.4885048
+        ]
+      },
+      "properties": {
+        "node_id": "65477761",
+        "cost_before": 5230.0,
+        "cost_after": 5042.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2459403,
+          37.4763616
+        ]
+      },
+      "properties": {
+        "node_id": "449093717",
+        "cost_before": 5231.2,
+        "cost_after": 5043.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2461889,
+          37.4763577
+        ]
+      },
+      "properties": {
+        "node_id": "12993288236",
+        "cost_before": 5231.3,
+        "cost_after": 5043.9,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.242765,
+          37.4908509
+        ]
+      },
+      "properties": {
+        "node_id": "783764679",
+        "cost_before": 5232.5,
+        "cost_after": 5045.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2469279,
+          37.489709
+        ]
+      },
+      "properties": {
+        "node_id": "65474803",
+        "cost_before": 5233.6,
+        "cost_after": 5046.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2485769,
+          37.4834864
+        ]
+      },
+      "properties": {
+        "node_id": "65424330",
+        "cost_before": 5241.8,
+        "cost_after": 5054.4,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2429251,
+          37.4904084
+        ]
+      },
+      "properties": {
+        "node_id": "2280188872",
+        "cost_before": 5242.0,
+        "cost_after": 5054.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2460761,
+          37.4762647
+        ]
+      },
+      "properties": {
+        "node_id": "12993288239",
+        "cost_before": 5275.0,
+        "cost_after": 5087.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2427761,
+          37.490163
+        ]
+      },
+      "properties": {
+        "node_id": "783764670",
+        "cost_before": 5285.8,
+        "cost_after": 5148.2,
+        "cost_reduction": 137.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.243059,
+          37.4901572
+        ]
+      },
+      "properties": {
+        "node_id": "8721957192",
+        "cost_before": 5334.3,
+        "cost_after": 5147.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2430238,
+          37.4901289
+        ]
+      },
+      "properties": {
+        "node_id": "8721957193",
+        "cost_before": 5347.6,
+        "cost_after": 5160.2,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.243156,
+          37.4900704
+        ]
+      },
+      "properties": {
+        "node_id": "783764668",
+        "cost_before": 5373.1,
+        "cost_after": 5185.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.243242,
+          37.4900151
+        ]
+      },
+      "properties": {
+        "node_id": "783764693",
+        "cost_before": 5402.4,
+        "cost_after": 5215.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2453002,
+          37.4913525
+        ]
+      },
+      "properties": {
+        "node_id": "7676764089",
+        "cost_before": 5421.0,
+        "cost_after": 5233.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2477306,
+          37.4882847
+        ]
+      },
+      "properties": {
+        "node_id": "65477767",
+        "cost_before": 5423.4,
+        "cost_after": 5236.1,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2471726,
+          37.4719799
+        ]
+      },
+      "properties": {
+        "node_id": "65507057",
+        "cost_before": 5436.9,
+        "cost_after": 5249.5,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2481929,
+          37.4881168
+        ]
+      },
+      "properties": {
+        "node_id": "65389423",
+        "cost_before": 5558.7,
+        "cost_after": 5371.3,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2448636,
+          37.4910883
+        ]
+      },
+      "properties": {
+        "node_id": "7676764090",
+        "cost_before": 5566.4,
+        "cost_after": 5379.0,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2483639,
+          37.4901775
+        ]
+      },
+      "properties": {
+        "node_id": "65424373",
+        "cost_before": 5657.9,
+        "cost_after": 5470.6,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2478182,
+          37.4714569
+        ]
+      },
+      "properties": {
+        "node_id": "65392037",
+        "cost_before": 5681.1,
+        "cost_after": 5493.8,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2480506,
+          37.48916
+        ]
+      },
+      "properties": {
+        "node_id": "65493236",
+        "cost_before": 5778.0,
+        "cost_after": 5590.7,
+        "cost_reduction": 187.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2485153,
+          37.4709131
+        ]
+      },
+      "properties": {
+        "node_id": "65469695",
+        "cost_before": 5939.9,
+        "cost_after": 5752.6,
+        "cost_reduction": 187.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "scenario": "James Avenue protected bike lane",
+  "school": "North Star Academy",
+  "corridor_length_meters": 93.7,
+  "school_node": 5432482107,
+  "impact": {
+    "improved_origin_nodes": 270,
+    "average_weighted_cost_reduction": 184.0,
+    "added_protected_meters": 93.7
+  },
+  "model": {
+    "protected_street_multiplier": 1,
+    "unprotected_street_multiplier": 3
+  },
+  "disclaimer": "Exploratory routing simulation using OpenStreetMap data and illustrative comfort weights. Origin nodes are not households or students. Results do not represent verified safety improvements."
+}
