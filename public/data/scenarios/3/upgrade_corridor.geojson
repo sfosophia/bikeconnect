@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "adams street"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2316465,
+            37.4818159
+          ],
+          [
+            -122.2320613,
+            37.4821121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "adams street"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2323207,
+            37.4822973
+          ],
+          [
+            -122.2320613,
+            37.4821121
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "duane street"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2343371,
+            37.4807775
+          ],
+          [
+            -122.2345464,
+            37.4809451
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "duane street"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2360282,
+            37.4821318
+          ],
+          [
+            -122.2356912,
+            37.4818619
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "duane street"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2345464,
+            37.4809451
+          ],
+          [
+            -122.2348949,
+            37.4812242
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "duane street"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2356912,
+            37.4818619
+          ],
+          [
+            -122.2348949,
+            37.4812242
+          ]
+        ]
+      }
+    }
+  ]
+}

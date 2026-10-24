@@ -1,0 +1,74 @@
+{
+  "school": "North Star Academy",
+  "evaluated_corridors": 393,
+  "ranking_method": "Modeled total comfort-cost reduction per meter of proposed upgrade",
+  "top_three": [
+    {
+      "name": "harrison avenue",
+      "segments": [
+        [
+          65424486,
+          65424487
+        ],
+        [
+          65424486,
+          7531009955
+        ],
+        [
+          65424487,
+          65424490
+        ]
+      ],
+      "length": 285.79304941686416,
+      "improved_origin_nodes": 1139,
+      "total_weighted_cost_reduction": 499266.3,
+      "average_weighted_cost_reduction": 438.3,
+      "benefit_per_meter": 1746.95
+    },
+    {
+      "name": "duane street",
+      "segments": [
+        [
+          65424490,
+          5432482107
+        ],
+        [
+          65465515,
+          5432483638
+        ],
+        [
+          5432482107,
+          5432483649
+        ],
+        [
+          5432483638,
+          5432483649
+        ]
+      ],
+      "length": 212.0016449497267,
+      "improved_origin_nodes": 1684,
+      "total_weighted_cost_reduction": 286931.2,
+      "average_weighted_cost_reduction": 170.4,
+      "benefit_per_meter": 1353.44
+    },
+    {
+      "name": "adams street",
+      "segments": [
+        [
+          4184051507,
+          7354422632
+        ],
+        [
+          4772496022,
+          7354422632
+        ]
+      ],
+      "length": 80.02796513965279,
+      "improved_origin_nodes": 586,
+      "total_weighted_cost_reduction": 88210.5,
+      "average_weighted_cost_reduction": 150.5,
+      "benefit_per_meter": 1102.25
+    }
+  ],
+  "disclaimer": "Exploratory OSM-based analysis. Origins are network nodes, not student homes. Comfort multipliers are illustrative."
+}

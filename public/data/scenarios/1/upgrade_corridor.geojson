@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "harrison avenue"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2324771,
+            37.4824089
+          ],
+          [
+            -122.2336366,
+            37.4813971
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "harrison avenue"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2324771,
+            37.4824089
+          ],
+          [
+            -122.2321727,
+            37.4826894
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "harrison avenue"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2336366,
+            37.4813971
+          ],
+          [
+            -122.2343371,
+            37.4807775
+          ]
+        ]
+      }
+    }
+  ]
+}

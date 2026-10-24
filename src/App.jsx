@@ -1,61 +1,368 @@
 
 import { useEffect, useRef, useState } from "react";
-import {
-  Map,
-  Marker,
-  NavigationControl,
-  setWorkerUrl,
-} from "maplibre-gl";
-
-import "maplibre-gl/dist/maplibre-gl.css";
+import * as maplibregl from "maplibre-gl";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
+import "maplibre-gl/dist/maplibre-gl.css";
 import "./App.css";
 
-setWorkerUrl(workerUrl);
+maplibregl.setWorkerUrl(workerUrl);
 
-const SCHOOL = {
-  name: "North Star Academy",
-  longitude: -122.235,
-  latitude: 37.48081,
-};
+// Network routing destination near North Star Academy.
+// Not a verified school entrance.
+const SCHOOL = [-122.2345464, 37.4809451];
 
-const EMPTY_FILTER = [
-  "==",
-  ["get", "origin_node"],
-  "",
-];
-
-const EMPTY_GEOJSON = {
+const EMPTY = {
   type: "FeatureCollection",
   features: [],
 };
 
+async function loadJSON(url) {
+  const response = await fetch(url, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`${url}: HTTP ${response.status}`);
+  }
+  return response.json();
+}
+
+function fmt(value, digits = 1) {
+  return Number(value ?? 0).toLocaleString("en-US", {
+    maximumFractionDigits: digits,
+  });
+}
+
+function linesOf(geometry) {
+  if (!geometry) return [];
+  if (geometry.type === "LineString") {
+    return [geometry.coordinates];
+  }
+  if (geometry.type === "MultiLineString") {
+    return geometry.coordinates;
+  }
+  return [];
+}
+
+function coordinatesOf(geometry) {
+  return linesOf(geometry).flat();
+}
+
+function originFromFeature(feature) {
+  const p = feature.properties;
+  return {
+    node_id: String(p.node_id),
+    cost_before: Number(p.cost_before),
+    cost_after: Number(p.cost_after),
+    cost_reduction: Number(p.cost_reduction),
+    coordinates: feature.geometry.coordinates,
+  };
+}
+
+function percentReduction(origin) {
+  if (!origin || origin.cost_before <= 0) return 0;
+  return (100 * origin.cost_reduction) / origin.cost_before;
+}
+
+function coordinateKey(point) {
+  return `${Number(point[0]).toFixed(7)},${Number(point[1]).toFixed(7)}`;
+}
+
+function edgeKey(a, b) {
+  return [coordinateKey(a), coordinateKey(b)].sort().join("|");
+}
+
+// Find the exact exported street segments shared by the
+// selected route and the proposed corridor.
+function overlappingRouteSegments(route, corridor) {
+  if (!route || !corridor) return EMPTY;
+
+  const corridorEdges = new Set();
+
+  for (const feature of corridor.features ?? []) {
+    for (const line of linesOf(feature.geometry)) {
+      for (let i = 1; i < line.length; i++) {
+        corridorEdges.add(edgeKey(line[i - 1], line[i]));
+      }
+    }
+  }
+
+  const features = [];
+
+  for (const line of linesOf(route.geometry)) {
+    for (let i = 1; i < line.length; i++) {
+      const a = line[i - 1];
+      const b = line[i];
+
+      if (corridorEdges.has(edgeKey(a, b))) {
+        features.push({
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "LineString",
+            coordinates: [a, b],
+          },
+        });
+      }
+    }
+  }
+
+  return {
+    type: "FeatureCollection",
+    features,
+  };
+}
+
+function chooseExample(origins, routes, corridor) {
+  const afterRoutes = new Map();
+
+  for (const feature of routes) {
+    if (feature.properties.scenario === "after") {
+      afterRoutes.set(
+        String(feature.properties.origin_node),
+        feature
+      );
+    }
+  }
+
+  const candidates = origins
+    .map(originFromFeature)
+    .filter(
+      (origin) =>
+        origin.cost_before > 0 &&
+        origin.cost_reduction > 0 &&
+        Number.isFinite(origin.cost_after) &&
+        afterRoutes.has(origin.node_id)
+    )
+    .map((origin) => {
+      const route = afterRoutes.get(origin.node_id);
+      const overlap = overlappingRouteSegments(route, corridor);
+
+      return {
+        ...origin,
+        overlapCount: overlap.features.length,
+        percentage: percentReduction(origin),
+      };
+    })
+    .filter((origin) => origin.overlapCount > 0);
+
+  // Favor an understandable, substantial improvement.
+  // Never invent a demonstration result.
+  candidates.sort(
+    (a, b) =>
+      b.percentage - a.percentage ||
+      b.overlapCount - a.overlapCount
+  );
+
+  return candidates[0] ?? null;
+}
+
+function addLayers(map) {
+  map.addSource("bike-network", {
+    type: "geojson",
+    data: "/data/bike_network.geojson",
+  });
+
+  map.addLayer({
+    id: "bike-network-lines",
+    type: "line",
+    source: "bike-network",
+    paint: {
+      "line-color": "#94a3b8",
+      "line-width": 2,
+      "line-opacity": 0.35,
+    },
+  });
+
+  for (const id of [
+    "routes",
+    "corridor",
+    "origins",
+    "route-benefit",
+  ]) {
+    map.addSource(id, {
+      type: "geojson",
+      data: EMPTY,
+    });
+  }
+
+  // Blue route, underneath the proposed corridor.
+  map.addLayer({
+    id: "route-outline",
+    type: "line",
+    source: "routes",
+    filter: ["==", ["get", "origin_node"], ""],
+    paint: {
+      "line-color": "#ffffff",
+      "line-width": 8,
+    },
+  });
+
+  map.addLayer({
+    id: "selected-route",
+    type: "line",
+    source: "routes",
+    filter: ["==", ["get", "origin_node"], ""],
+    paint: {
+      "line-color": "#2563eb",
+      "line-width": 5,
+    },
+  });
+
+  map.addLayer({
+    id: "corridor-outline",
+    type: "line",
+    source: "corridor",
+    paint: {
+      "line-color": "#ffffff",
+      "line-width": 12,
+    },
+  });
+
+  map.addLayer({
+    id: "corridor-before",
+    type: "line",
+    source: "corridor",
+    paint: {
+      "line-color": "#f59e0b",
+      "line-width": 8,
+      "line-dasharray": [2, 1.5],
+    },
+  });
+
+  map.addLayer({
+    id: "corridor-after",
+    type: "line",
+    source: "corridor",
+    layout: { visibility: "none" },
+    paint: {
+      "line-color": "#16a34a",
+      "line-width": 8,
+    },
+  });
+
+  // Thin yellow dashes show where the selected route uses
+  // the upgraded corridor without obscuring its green color.
+  map.addLayer({
+    id: "route-benefit-highlight",
+    type: "line",
+    source: "route-benefit",
+    layout: { visibility: "none" },
+    paint: {
+      "line-color": "#fde047",
+      "line-width": 3,
+      "line-dasharray": [2, 2],
+      "line-opacity": 1,
+    },
+  });
+
+  map.addLayer({
+    id: "origin-points",
+    type: "circle",
+    source: "origins",
+    paint: {
+      "circle-radius": 4,
+      "circle-color": "#22c55e",
+      "circle-opacity": 0.75,
+      "circle-stroke-color": "#ffffff",
+      "circle-stroke-width": 0.5,
+    },
+  });
+
+  map.addLayer({
+    id: "selected-origin",
+    type: "circle",
+    source: "origins",
+    filter: ["==", ["get", "node_id"], ""],
+    paint: {
+      "circle-radius": 8,
+      "circle-color": "#7c3aed",
+      "circle-stroke-color": "#ffffff",
+      "circle-stroke-width": 2,
+    },
+  });
+}
+
+const comparisonBox = {
+  borderRadius: 10,
+  padding: 12,
+  minWidth: 0,
+};
+
 export default function App() {
-  const mapContainer = useRef(null);
+  const containerRef = useRef(null);
   const mapRef = useRef(null);
-  const corridorBoundsRef = useRef(null);
+  const dataRef = useRef(null);
+  const boundsRef = useRef(null);
 
   const [mapReady, setMapReady] = useState(false);
+  const [recommendations, setRecommendations] = useState([]);
+  const [selectedRank, setSelectedRank] = useState(null);
   const [selectedOrigin, setSelectedOrigin] = useState(null);
-  const [scenario, setScenario] = useState("before");
-  const [simulation, setSimulation] = useState(null);
-  const [corridorError, setCorridorError] = useState("");
+  const [scenario, setScenario] = useState("after");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [benefitSegments, setBenefitSegments] = useState(0);
 
+  const recommendation = recommendations.find(
+    (item) => item.rank === selectedRank
+  );
+
+  function fitRoute(origin, data) {
+    const map = mapRef.current;
+    if (!map || !origin || !data) return;
+
+    const route = data.routes.features.find(
+      (feature) =>
+        String(feature.properties.origin_node) === origin.node_id &&
+        feature.properties.scenario === "after"
+    );
+
+    if (!route) return;
+
+    const coords = coordinatesOf(route.geometry);
+    if (coords.length === 0) return;
+
+    const bounds = new maplibregl.LngLatBounds();
+
+    for (const point of coords) bounds.extend(point);
+    bounds.extend(SCHOOL);
+
+    map.fitBounds(bounds, {
+      padding: 95,
+      maxZoom: 16.5,
+      duration: 650,
+    });
+  }
+
+  function selectOrigin(origin, zoom = false, data = dataRef.current) {
+    setSelectedOrigin(origin);
+
+    if (zoom && origin && data) {
+      fitRoute(origin, data);
+    }
+  }
+
+  // Load recommendations.
   useEffect(() => {
     let cancelled = false;
 
-    fetch("/data/simulation_results.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Simulation results unavailable");
+    loadJSON("/data/scenarios/manifest.json")
+      .then((manifest) => {
+        if (cancelled) return;
+
+        const items = manifest.recommendations ?? [];
+        setRecommendations(items);
+
+        if (items.length) {
+          setSelectedRank(items[0].rank);
+        } else {
+          setError("No recommendations found.");
+          setLoading(false);
         }
-        return response.json();
       })
-      .then((data) => {
-        if (!cancelled) setSimulation(data);
-      })
-      .catch((error) => {
-        console.error("Simulation loading error:", error);
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err.message);
+          setLoading(false);
+        }
       });
 
     return () => {
@@ -63,617 +370,535 @@ export default function App() {
     };
   }, []);
 
+  // Initialize map.
   useEffect(() => {
-    let disposed = false;
+    if (!containerRef.current || mapRef.current) return;
 
-    const map = new Map({
-      container: mapContainer.current,
+    const map = new maplibregl.Map({
+      container: containerRef.current,
       style: "https://tiles.openfreemap.org/styles/liberty",
-      center: [SCHOOL.longitude, SCHOOL.latitude],
+      center: SCHOOL,
       zoom: 15,
     });
 
     mapRef.current = map;
 
-    map.addControl(new NavigationControl(), "top-right");
+    map.addControl(
+      new maplibregl.NavigationControl(),
+      "top-right"
+    );
 
-    const schoolMarker = new Marker({
-      color: "#2563eb",
-    })
-      .setLngLat([
-        SCHOOL.longitude,
-        SCHOOL.latitude,
-      ])
+    const marker = document.createElement("div");
+    marker.style.cssText = `
+      width: 18px;
+      height: 18px;
+      background: #1d4ed8;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px #0005;
+      cursor: pointer;
+    `;
+
+    new maplibregl.Marker({ element: marker })
+      .setLngLat(SCHOOL)
+      .setPopup(
+        new maplibregl.Popup({ offset: 20 }).setText(
+          "North Star Academy — nearby network routing destination"
+        )
+      )
       .addTo(map);
 
-    map.on("load", async () => {
-      if (disposed) return;
+    map.on("load", () => {
+      addLayers(map);
 
-      // ---------------------------------------
-      // Existing OSM bicycle network
-      // ---------------------------------------
+      map.on("click", "origin-points", (event) => {
+        const feature = event.features?.[0];
+        if (!feature) return;
 
-      map.addSource("bike-network", {
-        type: "geojson",
-        data: "/data/bike_network.geojson",
+        selectOrigin(originFromFeature(feature));
       });
 
-      map.addLayer({
-        id: "bike-network-lines",
-        type: "line",
-        source: "bike-network",
-        paint: {
-          "line-color": [
-            "match",
-            ["get", "facility_type"],
-            "dedicated", "#16a34a",
-            "bike_lane_or_shared", "#2563eb",
-            "residential_unverified", "#eab308",
-            "other", "#94a3b8",
-            "#94a3b8",
-          ],
-          "line-width": 2.5,
-          "line-opacity": 0.35,
-        },
+      map.on("mouseenter", "origin-points", () => {
+        map.getCanvas().style.cursor = "pointer";
       });
 
-      // ---------------------------------------
-      // Selected route to school
-      // ---------------------------------------
-
-      map.addSource("improved-routes", {
-        type: "geojson",
-        data: "/data/improved_routes.geojson",
+      map.on("mouseleave", "origin-points", () => {
+        map.getCanvas().style.cursor = "";
       });
-
-      map.addLayer({
-        id: "selected-route-outline",
-        type: "line",
-        source: "improved-routes",
-        filter: EMPTY_FILTER,
-        layout: {
-          "line-cap": "round",
-          "line-join": "round",
-        },
-        paint: {
-          "line-color": "#ffffff",
-          "line-width": 10,
-        },
-      });
-
-      map.addLayer({
-        id: "selected-route",
-        type: "line",
-        source: "improved-routes",
-        filter: EMPTY_FILTER,
-        layout: {
-          "line-cap": "round",
-          "line-join": "round",
-        },
-        paint: {
-          "line-color": "#2563eb",
-          "line-width": 5,
-        },
-      });
-
-      // ---------------------------------------
-      // James Avenue corridor
-      // Load GeoJSON explicitly so failures
-      // can be reported and diagnosed.
-      // ---------------------------------------
-
-      let corridorData = EMPTY_GEOJSON;
-
-      try {
-        const response = await fetch(
-          "/data/james_upgrade.geojson",
-          { cache: "no-store" }
-        );
-
-        if (!response.ok) {
-          throw new Error(
-            `HTTP ${response.status}`
-          );
-        }
-
-        corridorData = await response.json();
-
-        const features = corridorData.features ?? [];
-
-        if (
-          corridorData.type !== "FeatureCollection" ||
-          features.length === 0
-        ) {
-          throw new Error(
-            "No corridor features found"
-          );
-        }
-
-        const coordinates = features.flatMap(
-          (feature) =>
-            feature.geometry?.type === "LineString"
-              ? feature.geometry.coordinates
-              : []
-        );
-
-        if (coordinates.length === 0) {
-          throw new Error(
-            "No LineString coordinates found"
-          );
-        }
-
-        const longitudes = coordinates.map(
-          (coordinate) => coordinate[0]
-        );
-
-        const latitudes = coordinates.map(
-          (coordinate) => coordinate[1]
-        );
-
-        corridorBoundsRef.current = [
-          [
-            Math.min(...longitudes),
-            Math.min(...latitudes),
-          ],
-          [
-            Math.max(...longitudes),
-            Math.max(...latitudes),
-          ],
-        ];
-
-        console.log(
-          "James Avenue corridor loaded:",
-          features.length,
-          "features",
-          corridorBoundsRef.current
-        );
-
-        if (!disposed) setCorridorError("");
-      } catch (error) {
-        console.error(
-          "James Avenue corridor loading failed:",
-          error
-        );
-
-        if (!disposed) {
-          setCorridorError(error.message);
-        }
-      }
-
-      if (disposed) return;
-
-      map.addSource("james-upgrade", {
-        type: "geojson",
-        data: corridorData,
-      });
-
-      // White outline separates the corridor
-      // from the selected blue route.
-      map.addLayer({
-        id: "james-corridor-outline",
-        type: "line",
-        source: "james-upgrade",
-        layout: {
-          "line-cap": "round",
-          "line-join": "round",
-        },
-        paint: {
-          "line-color": "#ffffff",
-          "line-width": 17,
-          "line-opacity": 1,
-        },
-      });
-
-      // BEFORE: dashed orange.
-      map.addLayer({
-        id: "james-corridor-before",
-        type: "line",
-        source: "james-upgrade",
-        layout: {
-          "visibility": "visible",
-          "line-cap": "butt",
-          "line-join": "round",
-        },
-        paint: {
-          "line-color": "#ea580c",
-          "line-width": 11,
-          "line-dasharray": [2, 1.5],
-          "line-opacity": 1,
-        },
-      });
-
-      // AFTER: solid bright green.
-      // No dasharray property is specified.
-      map.addLayer({
-        id: "james-corridor-after",
-        type: "line",
-        source: "james-upgrade",
-        layout: {
-          "visibility": "none",
-          "line-cap": "round",
-          "line-join": "round",
-        },
-        paint: {
-          "line-color": "#00b84a",
-          "line-width": 12,
-          "line-opacity": 1,
-        },
-      });
-
-      // ---------------------------------------
-      // Improved starting points
-      // ---------------------------------------
-
-      map.addSource("improved-origins", {
-        type: "geojson",
-        data: "/data/improved_origins.geojson",
-      });
-
-      map.addLayer({
-        id: "improved-origins-circles",
-        type: "circle",
-        source: "improved-origins",
-        paint: {
-          "circle-radius": 3.5,
-          "circle-color": "#16a34a",
-          "circle-stroke-color": "#ffffff",
-          "circle-stroke-width": 1,
-          "circle-opacity": 0.7,
-        },
-      });
-
-      map.addLayer({
-        id: "selected-origin-circle",
-        type: "circle",
-        source: "improved-origins",
-        filter: [
-          "==",
-          ["get", "node_id"],
-          "",
-        ],
-        paint: {
-          "circle-radius": 9,
-          "circle-color": "#7c3aed",
-          "circle-stroke-color": "#ffffff",
-          "circle-stroke-width": 3,
-        },
-      });
-
-      map.on(
-        "click",
-        "improved-origins-circles",
-        (event) => {
-          const feature = event.features?.[0];
-          if (!feature) return;
-
-          const p = feature.properties ?? {};
-
-          setSelectedOrigin({
-            id: String(p.node_id),
-            before: Number(p.cost_before),
-            after: Number(p.cost_after),
-            reduction: Number(p.cost_reduction),
-          });
-        }
-      );
-
-      map.on(
-        "mouseenter",
-        "improved-origins-circles",
-        () => {
-          map.getCanvas().style.cursor = "pointer";
-        }
-      );
-
-      map.on(
-        "mouseleave",
-        "improved-origins-circles",
-        () => {
-          map.getCanvas().style.cursor = "";
-        }
-      );
 
       setMapReady(true);
     });
 
     return () => {
-      disposed = true;
-      schoolMarker.remove();
       map.remove();
       mapRef.current = null;
     };
   }, []);
 
-  // -----------------------------------------
-  // Update selected route and scenario
-  // -----------------------------------------
+  // Load each selected recommendation and automatically
+  // choose a verified example route.
+  useEffect(() => {
+    if (!mapReady || selectedRank === null) return;
 
+    const map = mapRef.current;
+    if (!map) return;
+
+    let cancelled = false;
+
+    async function loadScenario() {
+      setLoading(true);
+      setError("");
+      setSelectedOrigin(null);
+      setBenefitSegments(0);
+      dataRef.current = null;
+      boundsRef.current = null;
+
+      for (const id of [
+        "corridor",
+        "origins",
+        "routes",
+        "route-benefit",
+      ]) {
+        map.getSource(id)?.setData(EMPTY);
+      }
+
+      const base = `/data/scenarios/${selectedRank}`;
+
+      try {
+        const [corridor, origins, routes] = await Promise.all([
+          loadJSON(`${base}/upgrade_corridor.geojson`),
+          loadJSON(`${base}/improved_origins.geojson`),
+          loadJSON(`${base}/improved_routes.geojson`),
+        ]);
+
+        if (cancelled) return;
+
+        const data = { corridor, origins, routes };
+        dataRef.current = data;
+
+        map.getSource("corridor").setData(corridor);
+        map.getSource("origins").setData(origins);
+        map.getSource("routes").setData(routes);
+
+        const bounds = new maplibregl.LngLatBounds();
+        let hasCoordinates = false;
+
+        for (const feature of corridor.features) {
+          for (const point of coordinatesOf(feature.geometry)) {
+            bounds.extend(point);
+            hasCoordinates = true;
+          }
+        }
+
+        if (hasCoordinates) {
+          boundsRef.current = bounds;
+        }
+
+        const example = chooseExample(
+          origins.features,
+          routes.features,
+          corridor
+        );
+
+        if (example) {
+          setSelectedOrigin(example);
+          setScenario("after");
+          fitRoute(example, data);
+        } else if (hasCoordinates) {
+          map.fitBounds(bounds, {
+            padding: 100,
+            maxZoom: 17,
+          });
+        }
+      } catch (err) {
+        if (!cancelled) setError(err.message);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+
+    loadScenario();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [mapReady, selectedRank]);
+
+  // Update Before/After route and the overlapping segment.
   useEffect(() => {
     const map = mapRef.current;
-
     if (!mapReady || !map) return;
 
-    const routeFilter = selectedOrigin
-      ? [
-          "all",
-          [
-            "==",
-            ["get", "origin_node"],
-            selectedOrigin.id,
-          ],
-          [
-            "==",
-            ["get", "scenario"],
-            scenario,
-          ],
-        ]
-      : EMPTY_FILTER;
-
-    map.setFilter(
-      "selected-route",
-      routeFilter
-    );
-
-    map.setFilter(
-      "selected-route-outline",
-      routeFilter
-    );
-
-    map.setFilter(
-      "selected-origin-circle",
-      [
-        "==",
-        ["get", "node_id"],
-        selectedOrigin?.id ?? "",
-      ]
-    );
-
     map.setLayoutProperty(
-      "james-corridor-before",
+      "corridor-before",
       "visibility",
       scenario === "before" ? "visible" : "none"
     );
 
     map.setLayoutProperty(
-      "james-corridor-after",
+      "corridor-after",
       "visibility",
       scenario === "after" ? "visible" : "none"
     );
+
+    // The full corridor is green in After regardless of origin.
+    // Yellow dashes appear only for a selected route in After.
+    map.setLayoutProperty(
+      "route-benefit-highlight",
+      "visibility",
+      scenario === "after" && selectedOrigin ? "visible" : "none"
+    );
+
+    const originId = selectedOrigin?.node_id ?? "";
+
+    const filter = [
+      "all",
+      ["==", ["get", "origin_node"], originId],
+      ["==", ["get", "scenario"], scenario],
+    ];
+
+    map.setFilter("route-outline", filter);
+    map.setFilter("selected-route", filter);
+
+    map.setFilter("selected-origin", [
+      "==",
+      ["get", "node_id"],
+      originId,
+    ]);
+
+    const data = dataRef.current;
+
+    if (!selectedOrigin || !data) {
+      map.getSource("route-benefit")?.setData(EMPTY);
+      setBenefitSegments(0);
+      return;
+    }
+
+    const route = data.routes.features.find(
+      (feature) =>
+        String(feature.properties.origin_node) === originId &&
+        feature.properties.scenario === scenario
+    );
+
+    const overlap = overlappingRouteSegments(
+      route,
+      data.corridor
+    );
+
+    map.getSource("route-benefit")?.setData(overlap);
+    setBenefitSegments(overlap.features.length);
   }, [mapReady, selectedOrigin, scenario]);
 
-  // -----------------------------------------
-  // Zoom to proposed improvement
-  // -----------------------------------------
+  function showExampleRoute() {
+    const data = dataRef.current;
+    if (!data || loading) return;
 
-  function zoomToImprovement() {
+    const example = chooseExample(
+      data.origins.features,
+      data.routes.features,
+      data.corridor
+    );
+
+    if (example) {
+      setScenario("after");
+      selectOrigin(example, true);
+    }
+  }
+
+  function chooseRecommendation(rank) {
+    if (rank === selectedRank) return;
+    setSelectedRank(rank);
+    setSelectedOrigin(null);
+    setScenario("after");
+  }
+
+  function zoomToCorridor() {
     const map = mapRef.current;
-    const bounds = corridorBoundsRef.current;
-
+    const bounds = boundsRef.current;
     if (!map || !bounds) return;
 
     map.fitBounds(bounds, {
-      padding: 120,
-      maxZoom: 18,
-      duration: 800,
+      padding: 110,
+      maxZoom: 17,
+      duration: 600,
     });
   }
 
-  const currentCost = selectedOrigin
-    ? scenario === "before"
-      ? selectedOrigin.before
-      : selectedOrigin.after
-    : null;
-
-  const improvementPercent =
-    selectedOrigin?.before > 0
-      ? (
-          (selectedOrigin.reduction /
-            selectedOrigin.before) *
-          100
-        ).toFixed(1)
-      : null;
-
-  const impact = simulation?.impact;
-
-  const buttonStyle = (active) => ({
-    padding: "10px 14px",
-    border: active
-      ? "2px solid #2563eb"
-      : "1px solid #cbd5e1",
-    borderRadius: "8px",
-    background: active ? "#dbeafe" : "#ffffff",
-    color: "#1e293b",
-    fontWeight: active ? 700 : 400,
-    cursor: "pointer",
-  });
+  const reduction = percentReduction(selectedOrigin);
 
   return (
     <div className="app">
-      <header>
-        <h1>BikeConnect</h1>
-        <p>School Bike Access Simulator</p>
-      </header>
-
-      <main>
-        <aside className="sidebar">
-          <h2>North Star Academy</h2>
-          <p>400 Duane Street, Redwood City</p>
-
-          <h3>James Avenue Improvement</h3>
-
+      <aside className="sidebar">
+        <header className="sidebar-header">
+          <h1>BikeConnect</h1>
           <p>
-            Model a protected bicycle lane along
-            93.7 meters of James Avenue.
+            Find high-impact bicycle-network improvements
+            near North Star Academy.
           </p>
+        </header>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "8px",
-              margin: "16px 0",
-              flexWrap: "wrap",
-            }}
-          >
+        {/* Main result: visible without scrolling */}
+        <section className="sidebar-section">
+          <h2>Before vs. After</h2>
+
+          <div className="scenario-toggle">
             <button
               type="button"
-              style={buttonStyle(
-                scenario === "before"
-              )}
+              className={scenario === "before" ? "active" : ""}
               onClick={() => setScenario("before")}
             >
               Before
             </button>
-
             <button
               type="button"
-              style={buttonStyle(
-                scenario === "after"
-              )}
+              className={scenario === "after" ? "active" : ""}
               onClick={() => setScenario("after")}
             >
-              After upgrade
+              After
             </button>
           </div>
 
+          {selectedOrigin ? (
+            <div style={{ marginTop: 12 }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: 8,
+                }}
+              >
+                <div
+                  style={{
+                    ...comparisonBox,
+                    background: "#fff3e0",
+                    color: "#7c2d12",
+                  }}
+                >
+                  <div style={{ fontSize: 11, fontWeight: 700 }}>
+                    BEFORE
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 23,
+                      fontWeight: 800,
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {fmt(selectedOrigin.cost_before)}
+                  </div>
+                  <div style={{ fontSize: 11 }}>
+                    Weighted cost
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    ...comparisonBox,
+                    background: "#dcfce7",
+                    color: "#166534",
+                  }}
+                >
+                  <div style={{ fontSize: 11, fontWeight: 700 }}>
+                    AFTER
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 23,
+                      fontWeight: 800,
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {fmt(selectedOrigin.cost_after)}
+                  </div>
+                  <div style={{ fontSize: 11 }}>
+                    Weighted cost
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style={{
+                  marginTop: 8,
+                  padding: 12,
+                  background: "#eff6ff",
+                  color: "#1d4ed8",
+                  borderRadius: 10,
+                  textAlign: "center",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 34,
+                    fontWeight: 800,
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {fmt(reduction)}%
+                </div>
+                <div style={{ fontWeight: 700, fontSize: 13 }}>
+                  Lower modeled cycling comfort cost
+                </div>
+              </div>
+
+              <p className="muted">
+                {benefitSegments > 0
+                  ? scenario === "after"
+                    ? `${benefitSegments} route segment${
+                        benefitSegments === 1 ? "" : "s"
+                      } highlighted in yellow where the selected route uses the proposed upgrade.`
+                    : `${benefitSegments} route segment${
+                        benefitSegments === 1 ? "" : "s"
+                      } could benefit from the proposed upgrade. Switch to After to see the highlighted section.`
+                  : "No exact corridor-edge overlap detected in the exported route."}
+              </p>
+            </div>
+          ) : (
+            <p className="muted">
+              {loading
+                ? "Loading example route..."
+                : "Select a green origin to compare its route."}
+            </p>
+          )}
+        </section>
+
+        <section className="sidebar-section">
+          <h2>Top 3 Recommended Upgrades</h2>
+          <p className="muted">
+            Ranked by modeled comfort-cost benefit per
+            meter of proposed improvement.
+          </p>
+
+          <div className="recommendation-list">
+            {recommendations.map((item) => (
+              <button
+                key={item.rank}
+                type="button"
+                className={
+                  "recommendation-card " +
+                  (selectedRank === item.rank ? "active" : "")
+                }
+                onClick={() => chooseRecommendation(item.rank)}
+              >
+                <span className="recommendation-rank">
+                  #{item.rank}
+                </span>
+                <span className="recommendation-details">
+                  <strong>{item.name}</strong>
+                  <small>
+                    {fmt(item.length_meters)} m proposed upgrade
+                  </small>
+                  <small>
+                    {fmt(item.improved_origin_nodes, 0)} improved
+                    network origins
+                  </small>
+                </span>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        {recommendation && (
+          <section className="sidebar-section">
+            <h2>{recommendation.name}</h2>
+
+            <div className="metrics">
+              <div className="metric">
+                <strong>
+                  {fmt(recommendation.length_meters)} m
+                </strong>
+                <span>Upgrade length</span>
+              </div>
+              <div className="metric">
+                <strong>
+                  {fmt(recommendation.improved_origin_nodes, 0)}
+                </strong>
+                <span>Improved origins</span>
+              </div>
+              <div className="metric">
+                <strong>
+                  {fmt(recommendation.benefit_per_meter, 0)}
+                </strong>
+                <span>Benefit per meter</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className="zoom-button"
+              onClick={zoomToCorridor}
+              disabled={loading}
+            >
+              Zoom to improvement
+            </button>
+          </section>
+        )}
+
+        <section className="sidebar-section">
+          <h2>Explore Routes to School</h2>
+
           <button
             type="button"
-            onClick={zoomToImprovement}
-            disabled={!corridorBoundsRef.current}
-            style={{
-              ...buttonStyle(false),
-              marginBottom: "12px",
-            }}
+            className="zoom-button"
+            onClick={showExampleRoute}
+            disabled={loading}
           >
-            Zoom to James Avenue
+            Show Example Route
           </button>
 
-          <p>
-            <strong>
-              {scenario === "before"
-                ? "Orange dashed"
-                : "Green solid"}
-            </strong>
-            {" "}— modeled James Avenue corridor.
+          <p className="muted">
+            Or click a green dot to choose another network origin.
+            Purple marks the selected origin; blue marks the
+            nearby school routing destination.
           </p>
 
-          {corridorError && (
-            <p style={{ color: "#b91c1c" }}>
-              Corridor loading error: {corridorError}
+          {selectedOrigin && (
+            <p className="muted">
+              Selected network node: {selectedOrigin.node_id}
             </p>
           )}
-
-          <h3>Simulation Impact</h3>
-
-          <p>
-            <strong>
-              {impact?.improved_origin_nodes ?? "270"}
-            </strong>
-            {" "}improved starting nodes
-          </p>
-
-          <p>
-            <strong>
-              {impact?.average_weighted_cost_reduction
-                ?? "184.0"}
-            </strong>
-            {" "}average comfort-cost reduction
-          </p>
-
-          <p>
-            <strong>
-              {impact?.added_protected_meters
-                ?? "93.7"}
-              {" "}m
-            </strong>
-            {" "}modeled protected infrastructure added
-          </p>
-
-          <hr />
-
-          <h3>Selected Route</h3>
-
-          {selectedOrigin ? (
-            <>
-              <p>
-                Starting node:{" "}
-                <strong>{selectedOrigin.id}</strong>
-              </p>
-
-              <p>
-                Viewing:{" "}
-                <strong>
-                  {scenario === "before"
-                    ? "Before upgrade"
-                    : "After upgrade"}
-                </strong>
-              </p>
-
-              <p>
-                Modeled cost:{" "}
-                <strong>
-                  {currentCost.toFixed(1)}
-                </strong>
-              </p>
-
-              <p>
-                Before:{" "}
-                {selectedOrigin.before.toFixed(1)}
-              </p>
-
-              <p>
-                After:{" "}
-                {selectedOrigin.after.toFixed(1)}
-              </p>
-
-              <p style={{ color: "#15803d" }}>
-                <strong>
-                  Cost reduction:{" "}
-                  {selectedOrigin.reduction.toFixed(1)}
-                  {" "}({improvementPercent}%)
-                </strong>
-              </p>
-
-              <p className="note">
-                Costs are weighted meter-equivalents,
-                not actual distance or travel time.
-              </p>
-
-              <button
-                type="button"
-                onClick={() => setSelectedOrigin(null)}
-              >
-                Clear selection
-              </button>
-            </>
-          ) : (
-            <p>
-              Click a green starting point to display
-              its modeled route to school.
-            </p>
-          )}
-
-          <hr />
-
-          <h3>Map Legend</h3>
-
-          <p>Blue line: selected route to school</p>
-          <p>Orange dashed: corridor before upgrade</p>
-          <p>Green solid: proposed protected corridor</p>
-          <p>Green dots: improved starting nodes</p>
-          <p>Purple dot: selected starting point</p>
-
-          <p className="note">
-            Exploratory simulation using OpenStreetMap
-            data and illustrative comfort weights:
-            1× for modeled protected infrastructure
-            and 3× for other streets. These values are
-            not verified safety ratings.
-          </p>
-        </aside>
-
-        <section className="map-panel">
-          <div ref={mapContainer} className="map" />
         </section>
+
+        <section className="sidebar-section">
+          <h2>Understanding the Result</h2>
+          <p className="muted">
+            The geographic route may remain unchanged.
+            Upgrading a street segment lowers its modeled
+            cycling comfort cost.
+          </p>
+          <p className="muted">
+            Blue: selected route. Orange dashed: proposed
+            corridor before. Green: upgraded corridor after.
+            Yellow: route overlap highlighted only in After.
+          </p>
+        </section>
+
+        <section className="sidebar-section">
+          <p className="disclaimer">
+            Exploratory OpenStreetMap-based simulation.
+            Illustrative weights: protected = 1×,
+            unprotected = 3×. Costs are weighted
+            meter-equivalents, not travel time or measured
+            safety risk. Improved origins are network nodes,
+            not people or households. Proposals require
+            engineering and feasibility review.
+          </p>
+        </section>
+      </aside>
+
+      <main className="map-area">
+        <div ref={containerRef} className="map-container" />
+
+        {loading && (
+          <div className="map-message">
+            Loading recommendation...
+          </div>
+        )}
+
+        {error && (
+          <div className="map-message error">
+            {error}
+          </div>
+        )}
       </main>
     </div>
   );

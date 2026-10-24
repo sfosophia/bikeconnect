@@ -1,80 +1,253 @@
 
-
 * {
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: Inter, system-ui, Arial, sans-serif;
 }
 
 .app {
+  display: flex;
+  width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  padding: 16px 24px;
-  background: #173c35;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header p {
-  margin: 4px 0 0;
-  font-size: 14px;
-}
-
-main {
-  display: flex;
-  flex: 1;
-  min-height: 0;
+  overflow: hidden;
+  background: #f8fafc;
 }
 
 .sidebar {
-  width: 320px;
-  padding: 24px;
-  background: #f6f8f7;
+  width: 360px;
+  min-width: 360px;
+  height: 100%;
   overflow-y: auto;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
 }
 
-.sidebar h2 {
-  margin-top: 0;
+.sidebar-header {
+  padding: 24px;
+  background: #14532d;
+  color: white;
 }
 
-.note {
-  margin-top: 32px;
+.sidebar-header h1 {
+  margin: 0 0 8px;
+  font-size: 27px;
+}
+
+.sidebar-header p {
+  margin: 0;
   font-size: 13px;
-  color: #5d6b65;
+  line-height: 1.6;
+  color: #dcfce7;
 }
 
-.map-panel {
+.sidebar-section {
+  padding: 20px 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sidebar-section h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.muted {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.recommendation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.recommendation-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 13px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.recommendation-card:hover {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.recommendation-card.active {
+  border: 2px solid #15803d;
+  background: #f0fdf4;
+}
+
+.recommendation-rank {
+  padding: 6px 8px;
+  border-radius: 7px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.recommendation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.recommendation-details strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.recommendation-details small {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.metric {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metric strong {
+  font-size: 19px;
+  color: #14532d;
+}
+
+.metric span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.zoom-button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #166534;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.zoom-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.scenario-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.scenario-toggle button {
+  flex: 1;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.scenario-toggle button.active {
+  background: #14532d;
+  color: white;
+  border-color: #14532d;
+}
+
+.origin-results {
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.origin-results p {
+  margin: 8px 0;
+}
+
+.legend p {
+  margin: 7px 0;
+  font-size: 12px;
+  color: #475569;
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.map-area {
+  position: relative;
   flex: 1;
   min-width: 0;
+  height: 100%;
 }
 
-.map {
+.map-container {
   width: 100%;
   height: 100%;
 }
 
+.map-message {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 12px 18px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px #0002;
+  font-size: 13px;
+  z-index: 10;
+}
+
+.map-message.error {
+  color: #b91c1c;
+}
+
 @media (max-width: 700px) {
-  main {
+  .app {
     flex-direction: column;
   }
 
   .sidebar {
     width: 100%;
+    min-width: 0;
+    height: 42%;
   }
 
-  .map-panel {
-    min-height: 55vh;
+  .map-area {
+    height: 58%;
+    min-height: 0;
   }
 }

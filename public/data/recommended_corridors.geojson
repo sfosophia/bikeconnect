@@ -1,0 +1,194 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 1,
+        "name": "harrison avenue",
+        "benefit_per_meter": 1746.95
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2324771,
+            37.4824089
+          ],
+          [
+            -122.2336366,
+            37.4813971
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 1,
+        "name": "harrison avenue",
+        "benefit_per_meter": 1746.95
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2324771,
+            37.4824089
+          ],
+          [
+            -122.2321727,
+            37.4826894
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 1,
+        "name": "harrison avenue",
+        "benefit_per_meter": 1746.95
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2336366,
+            37.4813971
+          ],
+          [
+            -122.2343371,
+            37.4807775
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 2,
+        "name": "duane street",
+        "benefit_per_meter": 1353.44
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2343371,
+            37.4807775
+          ],
+          [
+            -122.2345464,
+            37.4809451
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 2,
+        "name": "duane street",
+        "benefit_per_meter": 1353.44
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2360282,
+            37.4821318
+          ],
+          [
+            -122.2356912,
+            37.4818619
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 2,
+        "name": "duane street",
+        "benefit_per_meter": 1353.44
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2345464,
+            37.4809451
+          ],
+          [
+            -122.2348949,
+            37.4812242
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 2,
+        "name": "duane street",
+        "benefit_per_meter": 1353.44
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2356912,
+            37.4818619
+          ],
+          [
+            -122.2348949,
+            37.4812242
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 3,
+        "name": "adams street",
+        "benefit_per_meter": 1102.25
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2316465,
+            37.4818159
+          ],
+          [
+            -122.2320613,
+            37.4821121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 3,
+        "name": "adams street",
+        "benefit_per_meter": 1102.25
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.2323207,
+            37.4822973
+          ],
+          [
+            -122.2320613,
+            37.4821121
+          ]
+        ]
+      }
+    }
+  ]
+}

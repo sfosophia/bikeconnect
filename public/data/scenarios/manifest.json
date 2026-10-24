@@ -1,0 +1,36 @@
+{
+  "destination": "North Star Academy",
+  "recommendations": [
+    {
+      "rank": 1,
+      "name": "Harrison Avenue",
+      "length_meters": 285.8,
+      "improved_origin_nodes": 1139,
+      "total_weighted_cost_reduction": 499266.3,
+      "average_weighted_cost_reduction": 438.3,
+      "benefit_per_meter": 1746.95,
+      "data_path": "/data/scenarios/1"
+    },
+    {
+      "rank": 2,
+      "name": "Duane Street",
+      "length_meters": 212.0,
+      "improved_origin_nodes": 1684,
+      "total_weighted_cost_reduction": 286931.2,
+      "average_weighted_cost_reduction": 170.4,
+      "benefit_per_meter": 1353.44,
+      "data_path": "/data/scenarios/2"
+    },
+    {
+      "rank": 3,
+      "name": "Adams Street",
+      "length_meters": 80.0,
+      "improved_origin_nodes": 586,
+      "total_weighted_cost_reduction": 88210.5,
+      "average_weighted_cost_reduction": 150.5,
+      "benefit_per_meter": 1102.25,
+      "data_path": "/data/scenarios/3"
+    }
+  ],
+  "disclaimer": "Exploratory comfort-cost model using OSM street-network nodes as origins, not student addresses."
+}
